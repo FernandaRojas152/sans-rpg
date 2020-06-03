@@ -99,8 +99,7 @@ public abstract class GameObject extends AbstractThread {
 
 	public Rectangle getBounds() {
 
-		return new Rectangle(getX() + getWidth() / 8, getY() + getHeight() / 8, getWidth() - getWidth() / 4,
-				getHeight() - getHeight() / 4);
+		return new Rectangle(getX() + getWidth() / 8, getY() + getHeight() / 8, getWidth() - getWidth() / 4, getHeight() - getHeight() / 4);
 
 	}
 
