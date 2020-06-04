@@ -1,6 +1,8 @@
 package model;
 
 import java.awt.Graphics;
+
+import tools.GameLoader;
 import ui.Main;
 
 public class Player extends GameObject{
@@ -14,14 +16,15 @@ public class Player extends GameObject{
 	public static final int X_LIMIT_LEFT = 0;
 	public static final int X_LIMIT_RIGHT = Main.WIDTH;
 	
-	/**public Player(Game game) {
-		super(game, 50, 50, 0, 0, WIDTH, HEIGHT, "SANS");
-
-	}*/
+	public Player(Game game) {
+		super(game, SPAWN_X, SPAWN_Y, 0, 0, WIDTH, HEIGHT, GameLoader.images.get("SANS"));
+	}
 	
 	public Player(Game game, int x, int y) {
 		super(game, x, y);
-		// TODO Auto-generated constructor stub
+		setSkin(GameLoader.images.get("SANS"));
+		setWidth(WIDTH);
+		setHeight(HEIGHT);
 	}
 
 	@Override
