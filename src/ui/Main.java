@@ -15,6 +15,8 @@ public class Main extends JFrame{
 	public static final int HEIGHT = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getHeight()-60;
 	
 	private Game game;
+	private PanelDraw drawP;
+	private PanelMap map;
 	
 	public Main() {
 		GameLoader.loadResources();
@@ -26,8 +28,9 @@ public class Main extends JFrame{
 		setResizable(false);
 		
 		game= new Game();
-		
+		drawP= new PanelDraw(this);
 		setLocationRelativeTo(null);
+		add(drawP);
 		
 	}
 	
