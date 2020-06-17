@@ -14,7 +14,7 @@ public class GameLoader {
 	public static void loadResources() {
 		
 		// Se agregan las imagenes
-		images.put("SANS", ImageLoader.cargarImagen("images/sans.png"));
+		sprites.put("SANS", ImageLoader.cargarSprites("images/sans_caminando_abajo.png"));
 		images.put("BACKGROUND", ImageLoader.cargarImagen("images/background.jpg"));
 		//images.put("SHOT_PLAYER", ImageLoader.cargarImagen("images/laser4.png"));
 		//images.put("ENEMY", ImageLoader.cargarImagen("images/nave6.png"));

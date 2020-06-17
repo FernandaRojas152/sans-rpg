@@ -7,6 +7,8 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+import animation.Animation;
+import model.Player;
 import tools.GameLoader;
 import tools.SoundPlayer;
 
@@ -26,7 +28,7 @@ public class PanelDraw extends JPanel implements KeyListener{
 		setLayout(null);
 		setSize(Main.WIDTH, Main.HEIGHT);
 		
-		//main.getGame().startProcesses();
+		main.getGame().startProcesses();
 		//SoundPlayer.play("resources/sounds/background.wav");
 		addKeyListener(this);
 		setFocusable(true);
@@ -37,6 +39,8 @@ public class PanelDraw extends JPanel implements KeyListener{
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(BACKGROUND, 0, 0, null);
+		Player p= main.getGame().getPlayer();
+		p.render(g);
 		repaint();
 	}
 	
@@ -55,6 +59,9 @@ public class PanelDraw extends JPanel implements KeyListener{
 	@Override
 	public void keyTyped(KeyEvent arg0) {
 		// TODO Auto-generated method stub
+	}
+	
+	public void renderPlayer() {
 		
 	}
 
