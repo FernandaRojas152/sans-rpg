@@ -45,15 +45,58 @@ public class PanelDraw extends JPanel implements KeyListener{
 	}
 	
 	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyPressed(KeyEvent e) {
+		int key= e.getExtendedKeyCode();
+		Player player= main.getGame().getPlayer();
+		if(key== KeyEvent.VK_DOWN) {
+			player.getAnimation().setPause(false);
+			player.setAnimation(player.getAnimation1());
+			player.setSpeedY(1);
+		}
+		if(key== KeyEvent.VK_UP) {
+			player.getAnimation().setPause(false);
+			
+			player.setAnimation(player.getAnimation2());
+			player.setSpeedY(-1);
+		}
 		
+		if(key== KeyEvent.VK_RIGHT) {
+			player.getAnimation().setPause(false);
+			
+			player.setAnimation(player.getAnimation3());
+			player.setSpeedX(1);
+		}
+		
+		if(key== KeyEvent.VK_LEFT) {
+			player.getAnimation().setPause(false);
+			
+			player.setAnimation(player.getAnimation4());
+			player.setSpeedX(-1);
+		}
 	}
 
 	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyReleased(KeyEvent e) {
+		int key= e.getExtendedKeyCode();
+		Player player= main.getGame().getPlayer();
+		if(key== KeyEvent.VK_DOWN) {
+			player.getAnimation().setPause(true);
+			player.setSpeedY(0);
+		}
+		if(key== KeyEvent.VK_UP) {
+			player.getAnimation().setPause(true);
+			player.setSpeedY(0);
+		}
 		
+		if(key== KeyEvent.VK_RIGHT) {
+			player.getAnimation().setPause(true);
+			player.setSpeedX(0);
+		}
+		
+		if(key== KeyEvent.VK_LEFT) {
+			player.getAnimation().setPause(true);
+			player.setSpeedX(0);
+		}
 	}
 
 	@Override

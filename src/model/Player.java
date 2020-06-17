@@ -17,11 +17,20 @@ public class Player extends GameObject{
 	public static final int X_LIMIT_LEFT = 0;
 	public static final int X_LIMIT_RIGHT = Main.WIDTH;
 	private Animation animation;
+	private Animation animation1;
+	private Animation animation2;
+	private Animation animation3;
+	private Animation animation4;
 	private boolean isAlive;
 
 	public Player(Game game) {
 		super(game, 100, 100, 0, 0, WIDTH, HEIGHT, GameLoader.sprites.get("SANS"));
-		animation= new Animation(GameLoader.sprites.get("SANS"), 4, 1, 4, 1);
+		animation1= new Animation(GameLoader.sprites.get("SANS"), 4, 1, 4, 1);
+		animation2= new Animation(GameLoader.sprites.get("SANS ARRIBA"), 4, 1, 4, 1);
+		animation3= new Animation(GameLoader.sprites.get("SANS DERECHA"), 4, 1, 4, 1);
+		animation4= new Animation(GameLoader.sprites.get("SANS IZQUIERDA"), 4, 1, 4, 1);
+		animation= animation1;
+		
 		isAlive=true;
 	}
 
@@ -40,7 +49,10 @@ public class Player extends GameObject{
 			}
 			if(getX() >= WIDTH_GAME-WIDTH) {
 				setX(WIDTH_GAME-WIDTH);
+
 			}
+			setX(getX()+getSpeedX());
+			setY(getY()+getSpeedY());
 		}
 	}
 
@@ -79,7 +91,36 @@ public class Player extends GameObject{
 	public void setAnimation(Animation animation) {
 		this.animation = animation;
 	}
-	
-	
 
+	public Animation getAnimation1() {
+		return animation1;
+	}
+
+	public void setAnimation1(Animation animation1) {
+		this.animation1 = animation1;
+	}
+
+	public Animation getAnimation2() {
+		return animation2;
+	}
+
+	public void setAnimation2(Animation animation2) {
+		this.animation2 = animation2;
+	}
+
+	public Animation getAnimation3() {
+		return animation3;
+	}
+
+	public void setAnimation3(Animation animation3) {
+		this.animation3 = animation3;
+	}
+
+	public Animation getAnimation4() {
+		return animation4;
+	}
+
+	public void setAnimation4(Animation animation4) {
+		this.animation4 = animation4;
+	}
 }

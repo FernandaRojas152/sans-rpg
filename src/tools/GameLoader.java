@@ -15,6 +15,9 @@ public class GameLoader {
 		
 		// Se agregan las imagenes
 		sprites.put("SANS", ImageLoader.cargarSprites("images/sans_caminando_abajo.png"));
+		sprites.put("SANS ARRIBA", ImageLoader.cargarSprites("images/sans_arriba.png"));
+		sprites.put("SANS DERECHA", ImageLoader.cargarSprites("images/sans_derecha.png"));
+		sprites.put("SANS IZQUIERDA", ImageLoader.cargarSprites("images/sans_izquierda.png"));
 		images.put("BACKGROUND", ImageLoader.cargarImagen("images/background.jpg"));
 		//images.put("SHOT_PLAYER", ImageLoader.cargarImagen("images/laser4.png"));
 		//images.put("ENEMY", ImageLoader.cargarImagen("images/nave6.png"));
@@ -23,7 +26,9 @@ public class GameLoader {
 		// Se agregan los sprites
 		//sprites.put("EXPLOSION", ImageLoader.cargarSprites("images/explosion.png"));
 		
-		
+		//icono
+		images.put("ICON", ImageLoader.cargarImagen("images/icono.png"));
+		images.put("CURSOR", ImageLoader.cargarImagen("images/cursor.png"));
 		// Se agregan los mapas
 		//maps.put("MAP1", ImageLoader.cargarSprites("images/map.png"));
 		

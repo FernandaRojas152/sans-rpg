@@ -2,6 +2,9 @@ package ui;
 
 import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
+import java.awt.Point;
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 import model.Game;
 import tools.GameLoader;
@@ -26,9 +29,12 @@ public class Main extends JFrame{
 		setSize(WIDTH, HEIGHT);
 		setExtendedState(Frame.MAXIMIZED_BOTH);
 		setResizable(false);
-		
+		setIconImage(GameLoader.images.get("ICON"));
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(GameLoader.images.get("CURSOR"), new Point(0, 0), ""));
 		game= new Game();
+		
 		drawP= new PanelDraw(this);
+		
 		setLocationRelativeTo(null);
 		add(drawP);
 		

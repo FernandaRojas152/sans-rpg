@@ -8,13 +8,18 @@ public class MoveThread extends AbstractThread{
 		super(game);
 		setDaemon(true);
 	}
-	
+
 	@Override
 	public void run() {
+		//getGame().getPlayer().getAnimation().runAnimation();
 		while(true) {
 			try {
 				sleep(50);
+				if(!getGame().getPlayer().getAnimation().isPause()) {
+				getGame().getPlayer().move();	
 				getGame().getPlayer().getAnimation().runAnimation();
+				
+				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

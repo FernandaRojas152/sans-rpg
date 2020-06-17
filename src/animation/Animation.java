@@ -69,6 +69,8 @@ public class Animation {
 	 * Variable to know if the animation has finished.
 	 */
 	private boolean alive;
+	
+	private boolean pause;
 
 	/**
 	 * Constructor to create an animation
@@ -89,7 +91,8 @@ public class Animation {
 		this.row = row;
 		images = new BufferedImage[frames];
 		alive = true;
-
+		pause= false;
+		
 		fillSprites();
 
 	}
@@ -217,5 +220,12 @@ public class Animation {
 	this.row = row;	
 		
 	}
-		
+
+	public boolean isPause() {
+		return pause;
+	}
+
+	public void setPause(boolean pause) {
+		this.pause = pause;
+	}	
 }
