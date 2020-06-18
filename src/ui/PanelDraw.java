@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 import model.Player;
 import tools.GameLoader;
-//import tools.SoundPlayer;
+import tools.SoundPlayer;
 
 public class PanelDraw extends JPanel implements KeyListener{
 
@@ -26,7 +26,7 @@ public class PanelDraw extends JPanel implements KeyListener{
 		setSize(Main.WIDTH, Main.HEIGHT);
 
 		main.getGame().startProcesses();
-		//SoundPlayer.play("resources/sounds/background.wav");
+		SoundPlayer.play("/sounds/background.wav");
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);

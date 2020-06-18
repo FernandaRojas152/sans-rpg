@@ -30,7 +30,7 @@ public class Player extends GameObject{
 		animation2= new Animation(GameLoader.sprites.get("SANS ARRIBA"), 4, 1, 4, 1);
 		animation3= new Animation(GameLoader.sprites.get("SANS DERECHA"), 4, 1, 4, 1);
 		animation4= new Animation(GameLoader.sprites.get("SANS IZQUIERDA"), 4, 1, 4, 1);
-		animation5= new Animation(GameLoader.sprites.get("SANS PEINE"), 3, 1, 3, 1);
+		animation5= new Animation(GameLoader.sprites.get("SANS BROMA"), 3, 1, 3, 1);
 		animation= animation1;
 		isAlive=true;
 	}
