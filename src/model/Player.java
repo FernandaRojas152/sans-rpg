@@ -22,6 +22,7 @@ public class Player extends GameObject{
 	private Animation animation3;
 	private Animation animation4;
 	private Animation animation5;
+	private Animation animation6;
 	private boolean isAlive;
 
 	public Player(Game game) {
@@ -31,6 +32,7 @@ public class Player extends GameObject{
 		animation3= new Animation(GameLoader.sprites.get("SANS DERECHA"), 4, 1, 4, 1);
 		animation4= new Animation(GameLoader.sprites.get("SANS IZQUIERDA"), 4, 1, 4, 1);
 		animation5= new Animation(GameLoader.sprites.get("SANS BROMA"), 3, 1, 3, 1);
+		animation6= new Animation(GameLoader.sprites.get("SANS PEINE"), 3, 1, 3, 1);
 		animation= animation1;
 		isAlive=true;
 	}
@@ -131,5 +133,13 @@ public class Player extends GameObject{
 
 	public void setAnimation5(Animation animation5) {
 		this.animation5 = animation5;
+	}
+
+	public Animation getAnimation6() {
+		return animation6;
+	}
+
+	public void setAnimation6(Animation animation6) {
+		this.animation6 = animation6;
 	}
 }

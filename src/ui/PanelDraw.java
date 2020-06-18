@@ -74,8 +74,15 @@ public class PanelDraw extends JPanel implements KeyListener{
 		if(key== KeyEvent.VK_J) {
 			player.getAnimation().setPause(false);
 			player.setAnimation(player.getAnimation5());
-			//player.getAnimation().runAnimation();
+			SoundPlayer.play("/sounds/sans-talking.wav");
 		}
+		
+		if(key== KeyEvent.VK_P) {
+			player.getAnimation().setPause(false);
+			player.setAnimation(player.getAnimation6());
+		}
+		
+		
 	}
 
 	@Override
