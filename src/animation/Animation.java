@@ -153,7 +153,7 @@ public class Animation {
 
 		count++;
 
-		if (count >= frames - 1) {  // You can modify frames - 1 to another number if your image does not have sprite sheets in all the image.
+		if (count >= frames) {  // You can modify frames - 1 to another number if your image does not have sprite sheets in all the image.
 									// If your image has sprite sheets in all the image you can put only frames.
 			alive = false;
 			count = 0;

@@ -14,7 +14,7 @@ public class MoveThread extends AbstractThread{
 		//getGame().getPlayer().getAnimation().runAnimation();
 		while(true) {
 			try {
-				sleep(50);
+				sleep(40);
 				if(!getGame().getPlayer().getAnimation().isPause()) {
 				getGame().getPlayer().move();	
 				getGame().getPlayer().getAnimation().runAnimation();

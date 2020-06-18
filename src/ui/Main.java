@@ -19,7 +19,7 @@ public class Main extends JFrame{
 	
 	private Game game;
 	private PanelDraw drawP;
-	private PanelMap map;
+	//private PanelMap map;
 	
 	public Main() {
 		GameLoader.loadResources();
