@@ -52,7 +52,6 @@ public class Player extends GameObject{
 			}
 			if(getX() >= WIDTH_GAME-WIDTH) {
 				setX(WIDTH_GAME-WIDTH);
-
 			}
 			setX(getX()+getSpeedX());
 			setY(getY()+getSpeedY());
