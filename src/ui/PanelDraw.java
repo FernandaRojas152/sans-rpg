@@ -11,9 +11,6 @@ import tools.SoundPlayer;
 
 public class PanelDraw extends JPanel implements KeyListener{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public static final Image BACKGROUND= GameLoader.images.get("BACKGROUND");
@@ -24,7 +21,6 @@ public class PanelDraw extends JPanel implements KeyListener{
 		this.main= main;
 		setLayout(null);
 		setSize(Main.WIDTH, Main.HEIGHT);
-
 		main.getGame().startProcesses();
 		SoundPlayer.play("/sounds/background.wav");
 		addKeyListener(this);
@@ -52,37 +48,28 @@ public class PanelDraw extends JPanel implements KeyListener{
 		}
 		if(key== KeyEvent.VK_UP) {
 			player.getAnimation().setPause(false);
-
 			player.setAnimation(player.getAnimation2());
 			player.setSpeedY(-1);
 		}
-
 		if(key== KeyEvent.VK_RIGHT) {
 			player.getAnimation().setPause(false);
-
 			player.setAnimation(player.getAnimation3());
 			player.setSpeedX(1);
 		}
-
 		if(key== KeyEvent.VK_LEFT) {
 			player.getAnimation().setPause(false);
-
 			player.setAnimation(player.getAnimation4());
 			player.setSpeedX(-1);
 		}
-
 		if(key== KeyEvent.VK_J) {
 			player.getAnimation().setPause(false);
 			player.setAnimation(player.getAnimation5());
 			SoundPlayer.play("/sounds/sans-talking.wav");
 		}
-		
 		if(key== KeyEvent.VK_P) {
 			player.getAnimation().setPause(false);
 			player.setAnimation(player.getAnimation6());
 		}
-		
-		
 	}
 
 	@Override
